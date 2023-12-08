@@ -20,7 +20,7 @@ namespace WpfApp5
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+       public MainWindow()
         {
             InitializeComponent();
         }
@@ -32,16 +32,13 @@ namespace WpfApp5
         {
             try
             {
-                int x = Convert.ToInt32(ListBoxData.Items[0]);
-                int count = 0;
-                int m;
-                for (int i = 0; i <= x; ++i)
+                int a= Convert.ToInt32(ListBoxData.Items[0]);
+                int b= Convert.ToInt32(ListBoxData.Items[1]);
+                for (int i = a; i <= b; ++i)
                 {
-                    m = Convert.ToInt32(ListBoxData.Items[i]);
-                    if (m / 6 == 0 && m % 10 == 4) { count++; }
-
+                    TextBlockAnswer.Text = ($"{i}"); 
                 }
-                TextBlockAnswer.Text = $"{count}";
+                TextBlockAnswer.Text = $"{b-a+1}";
             }
             catch (FormatException)
             {
@@ -73,4 +70,3 @@ namespace WpfApp5
             ListBoxData.Items.Add(TbNumber.Text);
         }
     }
-}
