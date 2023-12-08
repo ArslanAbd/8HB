@@ -20,7 +20,7 @@ namespace WpfApp5
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+       public MainWindow()
         {
             InitializeComponent();
         }
@@ -38,8 +38,7 @@ namespace WpfApp5
                 for (int i = 0; i <= x; ++i)
                 {
                     m = Convert.ToInt32(ListBoxData.Items[i]);
-                    if (m / 6 == 0 && m % 10 == 4) { count++; }
-
+                    if (m > 9 && m < 99) { if (m / 8 == 0) { count++; } }
                 }
                 TextBlockAnswer.Text = $"{count}";
             }
