@@ -35,10 +35,11 @@ namespace WpfApp5
                 int x = Convert.ToInt32(ListBoxData.Items[0]);
                 int count = 0;
                 int m;
-                for (int i = 0; i <= x; ++i)
+                for (int i = 2; i <= x; ++i)
                 {
                     m = Convert.ToInt32(ListBoxData.Items[i]);
-                    if (m / 6 == 0 && m % 10 == 4) { count++; }
+                    if (m  % 6 == 0 && m  % 10 == 4) ;
+                    { count++; }
 
                 }
                 TextBlockAnswer.Text = $"{count}";
